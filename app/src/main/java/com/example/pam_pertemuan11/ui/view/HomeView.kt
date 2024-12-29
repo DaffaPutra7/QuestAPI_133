@@ -51,7 +51,7 @@ object DestinasiHome : DestinasiNavigasi {
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun HomeScree(
+fun HomeScreen(
     navigateToItemEntry: () -> Unit,
     modifier: Modifier = Modifier,
     onDetailClick: (String) -> Unit,

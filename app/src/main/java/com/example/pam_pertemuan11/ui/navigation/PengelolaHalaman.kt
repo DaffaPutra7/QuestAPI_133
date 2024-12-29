@@ -9,7 +9,7 @@ import androidx.navigation.compose.rememberNavController
 import com.example.pam_pertemuan11.ui.view.DestinasiEntry
 import com.example.pam_pertemuan11.ui.view.DestinasiHome
 import com.example.pam_pertemuan11.ui.view.EntryMhsScreen
-import com.example.pam_pertemuan11.ui.view.HomeScree
+import com.example.pam_pertemuan11.ui.view.HomeScreen
 
 @Composable
 fun PengelolaHalaman(navController: NavHostController = rememberNavController()) {
@@ -21,7 +21,7 @@ fun PengelolaHalaman(navController: NavHostController = rememberNavController())
     ) {
 
         composable(DestinasiHome.route) {
-            HomeScree(
+            HomeScreen(
                 navigateToItemEntry = {navController.navigate(DestinasiEntry.route)},
                 onDetailClick = {
                 }

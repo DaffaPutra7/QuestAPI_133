@@ -42,10 +42,11 @@ class HomeViewModel(private val mhs: MahasiswaRepository): ViewModel() {
         viewModelScope.launch {
             try {
                 mhs.deleteMahasiswa(nim)
+                getMhs() // Refresh
             } catch (e: IOException) {
-                HomeUiState.Error
+                mhsUIState = HomeUiState.Error
             } catch (e: HttpException) {
-                HomeUiState.Error
+                mhsUIState = HomeUiState.Error
             }
         }
     }
