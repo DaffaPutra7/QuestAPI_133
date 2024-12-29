@@ -12,9 +12,9 @@ interface MahasiswaRepository {
     suspend fun deleteMahasiswa(nim: String)
 }
 
-class NetworkMahasiswaRepository(mahasiswaService: MahasiswaService) : MahasiswaRepository {
+class NetworkMahasiswaRepository( private val mahasiswaApiService: MahasiswaService) : MahasiswaRepository {
     override suspend fun insertMahasiswa(mahasiswa: Mahasiswa) {
-        mahasiswaApiService.inserMahasiswa(mahasiswa)
+        mahasiswaApiService.insertMahasiswa(mahasiswa)
     }
 
     override suspend fun updateMahasiswa(nim: String, mahasiswa: Mahasiswa) {
