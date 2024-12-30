@@ -128,13 +128,7 @@ fun DetailBody(
                 ComponentDetailMhs(judul = "Kelas", isinya = mahasiswa.kelas)
                 ComponentDetailMhs(judul = "Angkatan", isinya = mahasiswa.angkatan)
                 Spacer(modifier = Modifier.height(16.dp))
-                Button(
-                    onClick = onDeleteClick,
-                    shape = MaterialTheme.shapes.small,
-                    modifier = Modifier.fillMaxWidth()
-                ) {
-                    Text(text = "Hapus")
-                }
+
             }
         }
     }
